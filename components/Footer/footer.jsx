@@ -1,13 +1,15 @@
 import React from "react";
-import logo from "../src/assets/Logo.png";
 import { GrFacebookOption, GrTwitter, GrLinkedinOption } from "react-icons/gr";
+import Aboutinfo from "./Aboutinfo";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section logo-section">
-        <img src="/src/assets/Logo.png" alt="logo" />
+        <a href="/" className="navbar-logo">
+          <img src="/src/assets/Logo.png" alt="logo" />
+        </a>
           <p>
             Small, artisan label that offers a thoughtfully curated collection
             of high quality everyday essentials made.
@@ -25,35 +27,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-section">
-          <h3>Company</h3>
-          <ul>
-            <li>About</li>
-            <li>Terms of Use</li>
-            <li>Privacy Policy</li>
-            <li>How it Works</li>
-            <li>Contact Us</li>
-          </ul>
-        </div>
-
-        <div className="footer-section">
-          <h3>Support</h3>
-          <ul>
-            <li>Support Carrer</li>
-            <li>24h Service</li>
-            <li>Quick Chat</li>
-          </ul>
-        </div>
-
-        <div className="footer-section">
-          <h3>Contact</h3>
-          <ul>
-            <li>Whatsapp</li>
-            <li>Support 24h</li>
-          </ul>
-        </div>
       </div>
-
+        <Aboutinfo/>
       <div className="footer-bottom">
         <p>Copyright © 2022 Dine Market</p>
         <p>
