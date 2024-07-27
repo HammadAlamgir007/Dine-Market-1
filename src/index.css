@@ -8,11 +8,10 @@
 }
 .navbar-container {
   column-gap: 20px; /* Gap between columns */
-  width: 100%;
+  width: 1500px;
   display: flex;
 align-items:center ;
   justify-content:space-evenly;
-  max-width: 1000px;
   padding: 0 24px;
   margin: 0 auto;
   margin-top: 30px;
@@ -103,9 +102,7 @@ nav input {
 .footer-content {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column layout */
-  column-gap: 20px; /* Gap between columns */
+  align-items: center;
 }
 
 .footer-section {
@@ -113,7 +110,10 @@ nav input {
   min-width: 200px;
   margin: 1rem;
 }
-
+.footer-section p
+{
+  width: 300px;
+}
 .logo-section {
   flex: 2;
 }
@@ -134,11 +134,16 @@ nav input {
 .icon-container {
   display: flex;
   margin-top: 1rem;
+  
 }
 
-.icon-container div {
+.icon-container a {
   margin-right: 1rem;
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  background-color: #D6D6D8;
+  border-radius:inherit;
 }
 
 .footer-bottom {
@@ -152,16 +157,18 @@ nav input {
   font-weight: bold;
 }
 
+
+
 .header {
   position: relative;
   display: flex;
+  align-items:center;
   justify-content: space-between;
-  gap: 4rem;
   background: white; /* White background, same as navbar */
   color: black; /* Black text color, same as navbar */
   font-size: 1rem; /* Font size similar to navbar */
-  align-items: center;
   margin-top: 50px;
+  width: 1300px;
 }
 
 .header-left-side, .header-right-side {
@@ -233,7 +240,7 @@ nav input {
 }
 
 .header-circle {
-  width: 600px;
+  width: 550px;
   height: 600px;
   border-radius: 50%;
   background-color: #FFECE3;
@@ -417,27 +424,196 @@ text-align: center;
 }
 .products-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  width: 1300px;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
   margin: 20px;
 }
 
 .product-card {
   text-align: center;
+  border: 1px solid #ddd; /* Optional: Add a border for better visualization */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  overflow: hidden; /* Optional: Ensure content doesn't overflow the card */
+  position: relative; /* Ensure positioning for images */
 }
 
 .product-image {
   width: 100%;
-  height: auto;
+  background-color: #b1a7a5;
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.product-info {
+  padding: 10px;
+  background-color: #fff; /* Optional: Add background color */
+  text-align: center;
 }
 
 .product-name {
   font-size: 16px;
-  margin-top: 10px;
+  margin: 10px 0 5px;
 }
 
 .product-price {
   font-size: 14px;
   color: grey;
-  margin-top: 5px;
+  margin: 5px 0;
+}
+/* =============================Marketing section---------=======================------------- */
+.marketing-section {
+  margin-top: 4rem;
+}
+
+.marketing-section .title {
+  display: flex;
+  justify-content: end;
+  padding: 0 8rem 2rem;
+  background: linear-gradient(180deg, white 50%, #FBFCFF 50%);
+}
+
+.marketing-section .title h1 {
+  font-weight: 700;
+  font-size: 2.75rem;
+  line-height: 55px;
+  letter-spacing: 0.03em;
+  color: #212121;
+  width: 45%;
+}
+
+.marketing-section .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 8rem 4rem;
+  background-color: #FBFCFF;
+}
+
+.marketing-section .content .left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.marketing-section .content .left .feature-background {
+  font-weight: 800;
+  font-size: 6.875rem;
+  line-height: 110px;
+  position: absolute;
+  color: #212121;
+  opacity: 0.07;
+  z-index: 1;
+}
+
+.marketing-section .content .left div {
+  width: 70%;
+  z-index: 2;
+}
+
+.marketing-section .content .left h3 {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 1rem;
+}
+
+.marketing-section .content .left p {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  color: #212121;
+}
+
+.marketing-section .content .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.marketing-section .content .right div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.marketing-section .content .right p {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 26px;
+  text-align: justify;
+  color: #212121;
+}
+
+.marketing-section .btn {
+  font-size: 0.875rem;
+  width: 50%;
+}
+
+.marketing-img {
+  object-fit: cover;
+}
+
+/* ===================================Newsletter========================================================= */
+.newsletter-section {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: linear-gradient(180deg, white 50%, #FBFCFF 50%);
+  text-align: center;
+}
+
+.newsletter-title h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 55px;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 1rem;
+}
+
+.newsletter-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.feature-background {
+  font-weight: 800;
+  font-size: 6.875rem;
+  line-height: 110px;
+  position: absolute;
+  color: #212121;
+  opacity: 0.07;
+  z-index: 1;
+}
+
+.newsletter-input {
+  width: 30%;
+  padding: 0.75rem 1rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  border: 1px solid #e4e5eb;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.newsletter-button {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #212121;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.newsletter-button:hover {
+  background-color: #333;
 }

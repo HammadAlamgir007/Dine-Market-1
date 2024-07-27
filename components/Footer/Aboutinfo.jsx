@@ -2,8 +2,7 @@ import React from "react";
 
 const Aboutinfo = () => {
   return (
-    <div>
-      {" "}
+    <div className="footer-info">
       <div className="footer-section">
         <h3>Company</h3>
         <ul>
@@ -17,7 +16,7 @@ const Aboutinfo = () => {
       <div className="footer-section">
         <h3>Support</h3>
         <ul>
-          <li>Support Carrer</li>
+          <li>Support Career</li>
           <li>24h Service</li>
           <li>Quick Chat</li>
         </ul>
@@ -25,7 +24,7 @@ const Aboutinfo = () => {
       <div className="footer-section">
         <h3>Contact</h3>
         <ul>
-          <li>Whatsapp</li>
+          <li>WhatsApp</li>
           <li>Support 24h</li>
         </ul>
       </div>
